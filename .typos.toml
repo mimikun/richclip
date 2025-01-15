@@ -1,0 +1,232 @@
+[default.extend-words]
+[files]
+extend-exclude = [
+]
+#error: `clipbaord` should be `clipboard`
+#  --> ./test/bats/x/x.bats:34:27
+#   |
+#34 | @test "X paste with empty clipbaord" {
+#   |                           ^^^^^^^^^
+#   |
+#error: `clipbaord` should be `clipboard`
+#  --> ./test/bats/x/x.bats:35:54
+#   |
+#35 |     # NOTE: This test fails with gnome, it seems the clipbaord is not empty after xclip getting
+#   |                                                      ^^^^^^^^^
+#   |
+#error: `clipbaord` should be `clipboard`
+#  --> ./test/bats/x/x.bats:37:13
+#   |
+#37 |     # Empty clipbaord
+#   |             ^^^^^^^^^
+#   |
+#error: `clipbaord` should be `clipboard`
+#  --> ./test/bats/wayland/wayland.bats:45:33
+#   |
+#45 | @test "wayland paste with empty clipbaord" {
+#   |                                 ^^^^^^^^^
+#   |
+#error: `clipbaord` should be `clipboard`
+#  --> ./test/bats/wayland/wayland.bats:46:13
+#   |
+#46 |     # Empty clipbaord
+#   |             ^^^^^^^^^
+#   |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:29:5
+#   |
+#29 |     finishied: bool,
+#   |     ^^^^^^^^^
+#   |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:34:5
+#   |
+#34 |     finishied: bool,
+#   |     ^^^^^^^^^
+#   |
+#error: `Faild` should be `Failed`, `Fail`, `Fails`
+#  --> ./src/clipboard/wayland.rs:77:64
+#   |
+#77 |         create_wayland_client::<PasteEventState<T>>().context("Faild to create wayland client")?;
+#   |                                                                ^^^^^
+#   |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:86:9
+#   |
+#86 |         finishied: false,
+#   |         ^^^^^^^^^
+#   |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:94:18
+#   |
+#94 |         if state.finishied {
+#   |                  ^^^^^^^^^
+#   |
+#error: `Faild` should be `Failed`, `Fail`, `Fails`
+#  --> ./src/clipboard/wayland.rs:110:60
+#    |
+#110 |         create_wayland_client::<CopyEventState>().context("Faild to create wayland client")?;
+#    |                                                            ^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:130:9
+#    |
+#130 |         finishied: false,
+#    |         ^^^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:136:18
+#    |
+#136 |         if state.finishied {
+#    |                  ^^^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:159:31
+#    |
+#159 |                     ctx.state.finishied = true;
+#    |                               ^^^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:206:27
+#    |
+#206 |                 ctx.state.finishied = true;
+#    |                           ^^^^^^^^^
+#    |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/recv.rs:4:12
+#  |
+#4 | pub static PROTOCAL_VER: u8 = 0;
+#  |            ^^^^^^^^
+#  |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/wayland.rs:222:47
+#    |
+#222 |                     writeln!(ctx.state.config.writter, "{}", mt).unwrap()
+#    |                                               ^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:224:27
+#    |
+#224 |                 ctx.state.finishied = true;
+#    |                           ^^^^^^^^^
+#    |
+#error: `protocal` should be `protocol`
+#  --> ./src/protocol/recv.rs:49:34
+#   |
+#49 |         .context("Failed to read protocal version")?;
+#   |                                  ^^^^^^^^
+#   |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/recv.rs:50:18
+#   |
+#50 |     if ver[0] != PROTOCAL_VER {
+#   |                  ^^^^^^^^
+#   |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/wayland.rs:250:56
+#    |
+#250 |                     unwrap_or_return!(ctx.state.config.writter.write(&buffer[0..n]), true);
+#    |                                                        ^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:257:23
+#    |
+#257 |             ctx.state.finishied = true;
+#    |                       ^^^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:263:23
+#    |
+#263 |             ctx.state.finishied = true;
+#    |                       ^^^^^^^^^
+#    |
+#error: `finishied` should be `finished`
+#  --> ./src/clipboard/wayland.rs:285:23
+#    |
+#285 |             ctx.state.finishied = true;
+#    |                       ^^^^^^^^^
+#    |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/recv.rs:204:44
+#    |
+#204 |         let buf = [0x02, 0x09, 0x02, 0x14, PROTOCAL_VER, b'M'];
+#    |                                            ^^^^^^^^
+#    |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/recv.rs:216:38
+#    |
+#216 |             [0x20, 0x09, 0x02, 0x14, PROTOCAL_VER,
+#    |                                      ^^^^^^^^
+#    |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/mod.rs:7:15
+#  |
+#7 | pub use recv::PROTOCAL_VER;
+#  |               ^^^^^^^^
+#  |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/source_data.rs:60:26
+#   |
+#60 |     use crate::protocol::PROTOCAL_VER;
+#   |                          ^^^^^^^^
+#   |
+#error: `PROTOCAL` should be `PROTOCOL`
+#  --> ./src/protocol/source_data.rs:66:38
+#   |
+#66 |             [0x20, 0x09, 0x02, 0x14, PROTOCAL_VER,
+#   |                                      ^^^^^^^^
+#   |
+#error: `prefered` should be `preferred`
+#  --> ./src/clipboard/x.rs:427:5
+#    |
+#427 |     prefered_atom: Atom,
+#    |     ^^^^^^^^
+#    |
+#error: `prefered` should be `preferred`
+#  --> ./src/clipboard/x.rs:430:9
+#    |
+#430 |     let prefered = get_atom_name(conn, prefered_atom)?;
+#    |         ^^^^^^^^
+#    |
+#error: `prefered` should be `preferred`
+#  --> ./src/clipboard/x.rs:430:40
+#    |
+#430 |     let prefered = get_atom_name(conn, prefered_atom)?;
+#    |                                        ^^^^^^^^
+#    |
+#error: `prefered` should be `preferred`
+#  --> ./src/clipboard/x.rs:431:39
+#    |
+#431 |     let mime_type = decide_mime_type(&prefered, supported)?;
+#    |                                       ^^^^^^^^
+#    |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/x.rs:538:56
+#    |
+#538 |                             writeln!(&mut state.config.writter, "{}", line)
+#    |                                                        ^^^^^^^
+#    |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/main.rs:207:9
+#    |
+#207 |         writter: &mut stdout(),
+#    |         ^^^^^^^
+#    |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/x.rs:570:86
+#    |
+#570 |                             if receiver.receive_and_write(&client, &mut state.config.writter)?
+#    |                                                                                      ^^^^^^^
+#    |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/mod.rs:13:9
+#   |
+#13 |     pub writter: &'a mut T,
+#   |         ^^^^^^^
+#   |
+#error: `writter` should be `writer`, `written`
+#  --> ./src/clipboard/x.rs:597:87
+#    |
+#597 |                         if receiver.receive_and_write_incr(&client, &mut state.config.writter)?
+#    |                                                                                       ^^^^^^^
+#    |
